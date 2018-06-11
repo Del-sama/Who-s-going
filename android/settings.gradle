@@ -1,0 +1,3 @@
+rootProject.name = 'who_s_going'
+
+include ':app'
