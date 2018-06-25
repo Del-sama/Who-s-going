@@ -1,42 +1,29 @@
 import React from 'react';
-import { StyleSheet, Text, TouchableOpacity, Image } from 'react-native';
+import { Text, TouchableOpacity, View } from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
-const Button = ({ text, backgroundColor, borderColor}) => {
+import styles from '../styles/stylesheet';
+
+const Button = ({ text, backgroundColor, borderColor, iconName}) => {
     return (
         <TouchableOpacity style={[
             styles.buttonStyle,
             backgroundColor={backgroundColor},
             borderColor={borderColor}]
             }>
-            <Text style={styles.textStyle}>{text}</Text>
+            <View style={styles.buttonViewStyle}>
+                <Text style={styles.buttonTextStyle}>
+                    <Icon
+                        name={iconName}
+                        size={25}
+                        color="#ffffff"
+                        style={styles.buttonIconStyle}
+                    />
+                    {text}
+                </Text>
+            </View>
         </TouchableOpacity>
     );
 };
-
-const styles = StyleSheet.create({
-    textStyle: {
-        alignSelf: 'center',
-        color: '#ffffff',
-        fontSize: 18,
-        fontWeight: '600',
-        paddingTop: 10,
-        paddingBottom: 10,
-        // fontFamily: 'Lato',
-    },
-    buttonStyle: {
-        // flex: 1,
-        // alignSelf: 'stretch',
-        // backgroundColor: '#fff',
-        borderRadius: 1,
-        borderWidth: 1,
-        marginLeft: 5,
-        marginRight: 5
-    },
-    // icon: {
-    //     width: 50,
-    //     height: 50,
-    //     backgroundColor: '#ffffff'
-    // }
-});
 
 export default Button;

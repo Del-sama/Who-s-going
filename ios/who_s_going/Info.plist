@@ -64,6 +64,10 @@
 		<string>Octicons.ttf</string>
 		<string>SimpleLineIcons.ttf</string>
 		<string>Zocial.ttf</string>
+		<string>DroidSans-Bold.ttf</string>
+		<string>Lato-Regular.ttf</string>
+		<string>DroidSans.ttf</string>
+		<string>Lato-Italic.ttf</string>
 	</array>
 </dict>
 </plist>
