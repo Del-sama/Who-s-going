@@ -9,12 +9,13 @@ const EventList = ({ eventData, selectHandler }) => {
         <View style={styles.listContainer}>
             <FlatList
                 data={eventData}
-                renderItem={({ item }) => {
-                    return <EventItem 
+                renderItem={({ item }) => (
+                    <EventItem 
                         title={item.title} 
                         date={item.date} 
                         selectHandler={selectHandler} />
-                }}
+                )}
+                keyExtractor={(item, index) => index+""}
             />
             <View style={styles.addButton}>
                 <MaterialIcons 
