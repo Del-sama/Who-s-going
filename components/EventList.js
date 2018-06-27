@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
         position: 'absolute',
         left: Dimensions.get('window').width - 70,
         top: Dimensions.get('window').height - 150,
-        zIndex: 100,},
+        zIndex: 100},
     listContainer: {
         alignItems: 'center'
     }
