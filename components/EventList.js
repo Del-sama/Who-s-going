@@ -6,7 +6,7 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
 const EventList = ({ eventData, selectHandler }) => {
     return(
-        <View>
+        <View style={styles.listContainer}>
             <FlatList
                 data={eventData}
                 renderItem={({ item }) => {
@@ -33,6 +33,8 @@ const styles = StyleSheet.create({
         position: 'absolute',
         left: Dimensions.get('window').width - 70,
         top: Dimensions.get('window').height - 150,
-        zIndex: 100,
+        zIndex: 100,},
+    listContainer: {
+        alignItems: 'center'
     }
 })
