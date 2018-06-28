@@ -60,7 +60,7 @@ export default createMaterialTopTabNavigator(
         } else if (routeName === 'Search') {
           iconName = "search"
         } else if (routeName === 'Messages') {
-          iconName = "email"
+          iconName = "message"
         } else if (routeName === 'Settings') {
           iconName = "settings"
         } 
