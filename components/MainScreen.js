@@ -27,6 +27,7 @@ const styles = StyleSheet.create({
     },
     headerText: {
         fontSize: 24,
+        color: '#983B59'
     },
     headerView: {
         flex: 1,
