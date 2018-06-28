@@ -58,3 +58,6 @@ buck-out/
 
 .env
 .run-local-build.sh
+
+android/
+ios/
