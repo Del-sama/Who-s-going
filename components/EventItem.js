@@ -27,16 +27,6 @@ const EventItem = ({ title, date, selectHandler }) => {
                     <Text style={styles.titleText}>{title}</Text> 
                     <Text style={styles.dateStyle}>Date: {date}</Text>
                 </View>
-                <View style={styles.actionIcons}>
-                    <TouchableMaterialIcons 
-                        name={'check'}
-                        onPress={selectHandler}
-                    />
-                    <TouchableMaterialIcons 
-                        name={'clear'}
-                        onPress={selectHandler}
-                    />
-                </View>
             </View>
         </Card>
     )
@@ -52,11 +42,6 @@ const styles = StyleSheet.create({
     },
     titleText: {
         fontSize: 18,
-    },
-    actionIcons: {
-        flex: 2,
-        flexDirection: 'row',
-        justifyContent: 'space-between'
     },
     eventDescription: {
         flex: 8,
