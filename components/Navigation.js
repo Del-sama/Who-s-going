@@ -2,16 +2,8 @@ import React, { Component } from 'react'
 import { Text, View } from 'react-native'
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import { createMaterialTopTabNavigator } from 'react-navigation';
+import EventListContainer from './EventListContainer';
 
-class HomeScreen extends Component {
-  render() {
-    return (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Text>Home!</Text>
-      </View>
-    );
-  }
-}
 
 class SettingsScreen extends Component {
   render() {
@@ -45,7 +37,7 @@ class Search extends Component {
 
 export default createMaterialTopTabNavigator(
   {
-    Home: HomeScreen,
+    Home: EventListContainer,
     Search: Search,
     Messages: Messaging,
     Settings: SettingsScreen
