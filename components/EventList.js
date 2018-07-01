@@ -9,12 +9,13 @@ const EventList = ({ eventData, selectHandler }) => {
         <View style={styles.listContainer}>
             <FlatList
                 data={eventData}
-                renderItem={({ item }) => {
-                    return <EventItem 
+                renderItem={({ item }) => (
+                    <EventItem 
                         title={item.title} 
                         date={item.date} 
                         selectHandler={selectHandler} />
-                }}
+                )}
+                keyExtractor={(item, index) => index+""}
             />
             <View style={styles.addButton}>
                 <MaterialIcons 
@@ -32,8 +33,8 @@ const styles = StyleSheet.create({
     addButton: {
         position: 'absolute',
         left: Dimensions.get('window').width - 70,
-        top: Dimensions.get('window').height - 150,
-        zIndex: 100,},
+        top: Dimensions.get('window').height - 250,
+        zIndex: 100},
     listContainer: {
         alignItems: 'center'
     }
