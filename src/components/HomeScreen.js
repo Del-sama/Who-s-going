@@ -1,21 +1,21 @@
 import React from 'react';
-import { Text, View, ImageBackground, Image, StyleSheet} from 'react-native';
+import { Text, View, ImageBackground, StyleSheet } from 'react-native';
 
 import LinearGradient from 'react-native-linear-gradient';
 
 import Button from './Button';
 
-const image = 'https://goo.gl/Xhb1Jr'
+const image = 'https://goo.gl/Xhb1Jr';
 
 const HomeScreen = () => {
     return (
         <ImageBackground
             style={styles.homeScreenBackgroundImage}
             source={{ uri: image }}
-            resizeMode= 'cover'
+            resizeMode='cover'
         >
             <LinearGradient
-                colors={['#000000','#00405C', '#003E5A', '#003B59', '#003454','#003153', 'transparent']}
+                colors={['#000000', '#00405C', '#003E5A', '#003B59', '#003454','#003153', 'transparent']}
                 style={styles.backgroundLinearGradient}
             />
             <View>
