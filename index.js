@@ -1,9 +1,9 @@
 import React from 'react';
 import { AppRegistry, Text } from 'react-native';
-import HomeScreen from './src/components/HomeScreen';
+import MainScreen from './src/components/MainScreen';
+
 
 const App = () => (
-    <HomeScreen />
+    <MainScreen  />
 )
-
 AppRegistry.registerComponent('who_s_going', () => App);

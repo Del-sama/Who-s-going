@@ -3,6 +3,7 @@ import { Text, View } from 'react-native'
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import { createMaterialTopTabNavigator } from 'react-navigation';
 import EventListContainer from './EventListContainer';
+import SettingsList from './Settings';
 
 
 class HomeScreen extends Component {
@@ -50,7 +51,7 @@ export default createMaterialTopTabNavigator(
     Home: EventListContainer,
     Search: Search,
     Messages: Messaging,
-    Settings: SettingsScreen
+    Settings: SettingsList
   },
   {
     navigationOptions: ({ navigation }) => ({
