@@ -17,7 +17,7 @@ export default StyleSheet.create({
   },
   containerStyle: {
     height: 80,
-    width: 315,
+    width: 350,
   },
   dateStyle: {
     fontSize: 14,

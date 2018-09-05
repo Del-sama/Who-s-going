@@ -1,13 +1,17 @@
-import { StyleSheet, Dimensions } from 'react-native';
+import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
-  addButton: {
-    position: 'absolute',
-    left: Dimensions.get('window').width - 70,
-    top: Dimensions.get('window').height - 250,
-    zIndex: 100,
+  container: {
+    height: '100%'
   },
   listContainer: {
     alignItems: 'center',
+    zIndex: 0,
+  },
+  createEvent: {
+    position: 'absolute',
+    bottom: 0,
+    width: '100%',
+    zIndex: 1,
   },
 });
