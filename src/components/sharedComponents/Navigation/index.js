@@ -2,7 +2,7 @@ import React from 'react';
 import { Text, View } from 'react-native';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import { createMaterialTopTabNavigator } from 'react-navigation';
-import EventListContainer from '../EventListContainer';
+import EventList from '../EventList';
 
 
 const SettingsScreen = () => (
@@ -27,7 +27,7 @@ const Search = () => (
 
 export default createMaterialTopTabNavigator(
   {
-    Home: EventListContainer,
+    Home: EventList,
     Search,
     Messages: Messaging,
     Settings: SettingsScreen,
