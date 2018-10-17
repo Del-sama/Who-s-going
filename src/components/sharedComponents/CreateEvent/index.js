@@ -2,10 +2,12 @@ import React, { Component } from 'react';
 import {
   Text, View, TextInput, Image, TouchableOpacity, KeyboardAvoidingView,
 } from 'react-native';
+import { connect } from 'react-redux';
 import DatePicker from 'react-native-datepicker';
 import styles from './styles';
 import PostButton from '../PostButton';
 import ToggleButton from '../ToggleButton';
+import { titleChanged } from '../../../actions';
 
 class CreateEvent extends Component {
     state = {
@@ -15,11 +17,17 @@ class CreateEvent extends Component {
 
     }
 
+    onTitleChange(text) {
+      this.props.titleChanged(text);
+    }
+
     toggleHidden() {
       this.setState({
         isHidden: !this.state.isHidden, // eslint-disable-line
       });
     }
+
+
 
     render() {
       const {
@@ -34,8 +42,7 @@ class CreateEvent extends Component {
           <View style={{ flexDirection: 'row' }}>
             <Text style={styles.textStyle}>I am going for...</Text>
             <TouchableOpacity
-                // eslint-disable-next-line
-              onPress={this.toggleHidden.bind(this)}
+              onPress={this.toggleHidden.bind(this)} // eslint-disable-line
             >
               <Image
                 style={styles.closeButton}
@@ -47,7 +54,7 @@ class CreateEvent extends Component {
             style={styles.inputStyle}
             placeholder="Title of event"
             placeholderTextColor="#C8C8C8"
-            onChangeText={text => this.setState({ title: text })}
+            onChangeText={this.onTitleChange.bind(this)}
             value={title}
             clearButtonMode="always"
           />
@@ -95,4 +102,4 @@ const Request = (props) => {
 };
 
 
-export default CreateEvent;
+export default connect(null, { titleChanged })(CreateEvent);

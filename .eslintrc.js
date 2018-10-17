@@ -9,6 +9,8 @@ module.exports = {
       "react/prop-types": "off",
       "react/jsx-filename-extension": "off",
       "no-return-assign": "off",
-      "no-param-reassign": "off"
+      "no-param-reassign": "off",
+      "react/prefer-stateless-function": "off",
+      "import/prefer-default-export": "off",
     }
 }

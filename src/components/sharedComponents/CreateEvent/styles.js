@@ -4,8 +4,8 @@ export default StyleSheet.create({
   container: {
     width: '100%',
     padding: 15,
-    borderWidth: 0.5,
-    borderColor: 'rgba(0, 0, 0, 0.1)',
+    borderWidth: 1,
+    borderColor: '#983B59',
     bottom: 0,
     backgroundColor: '#ffffff',
     height: 250,
