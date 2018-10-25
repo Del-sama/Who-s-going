@@ -10,6 +10,7 @@ export default StyleSheet.create({
     backgroundColor: '#ffffff',
     height: 250,
     justifyContent: 'space-around',
+    position: 'absolute',
   },
   textStyle: {
     fontSize: 17,
@@ -31,5 +32,13 @@ export default StyleSheet.create({
   closeButton: {
     marginTop: 5,
     tintColor: '#272727',
+  },
+  overlay: {
+    position: 'absolute',
+    top: 0,
+    bottom: 0,
+    left: 0,
+    right: 0,
+    backgroundColor: 'rgba(0,0,0,0.4)',
   },
 });
