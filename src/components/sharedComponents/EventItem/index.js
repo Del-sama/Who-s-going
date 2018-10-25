@@ -11,7 +11,12 @@ const EventItem = ({ title, date, onPress }) => (
     <Card containerStyle={styles.containerStyle}>
       <View style={styles.cardContent}>
         <View style={styles.eventDescription}>
-          <Text style={styles.titleText}>{title}</Text>
+          <Text
+            style={styles.titleText}
+            numberOfLines={1}
+          >
+            {title}
+          </Text>
           <Text style={styles.dateStyle}>
             Date:
             {date}

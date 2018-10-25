@@ -1,29 +1,47 @@
-import React from 'react';
+import React, { Component } from 'react';
 import {
   FlatList, View,
 } from 'react-native';
-import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import { connect } from 'react-redux';
 import EventItem from '../EventItem';
+import { eventsFetch } from '../../../actions';
 import styles from './styles';
-
-const eventData = [
-  { title: 'Movie at Imax', date: '1/2/2018' },
-  { title: 'Movie at genesis', date: '1/2/2018' },
-];
+import CreateEvent from '../CreateEvent';
 
 
-const EventList = () => (
-  <View style={styles.listContainer}>
-    <FlatList
-      data={eventData}
-      renderItem={({ item }) => (
-        <EventItem
-          title={item.title}
-          date={item.date}
-        />
-      )}
-      keyExtractor={(item, index) => `${index}`}
-    />
-  </View>);
+class EventList extends Component {
+  componentWillMount() {
+    this.props.eventsFetch();
+  }
 
-export default EventList;
+  render() {
+    const { events } = this.props;
+
+    return (
+      <View style={styles.container}>
+        <View style={styles.listContainer}>
+          <FlatList
+            data={events}
+            renderItem={({ item }) => (
+              <EventItem
+                title={item.title}
+                date={item.date}
+              />
+            )}
+            keyExtractor={(item, index) => `${index}`}
+          />
+        </View>
+        <View style={styles.createEvent}>
+          <CreateEvent />
+        </View>
+      </View>
+    );
+  }
+}
+
+const mapStateToProps = state => ({
+  events: state.events,
+});
+
+
+export default connect(mapStateToProps, { eventsFetch })(EventList);
